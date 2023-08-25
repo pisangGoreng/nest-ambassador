@@ -1,8 +1,8 @@
-FROM node:15.4
+FROM node:17
 
 WORKDIR /app
 COPY package.json .
-RUN npm install
+RUN npm install --legacy-peer-deps
 COPY . .
 
 CMD npm run start:dev
